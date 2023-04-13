@@ -4,3 +4,19 @@ create an state to manage the part of the form that should be displayed
 the form should show if there are any mistake sin his current section
 you are only able to navigate to sections that already were visited
 */
+.container{
+    min-height: 70%;
+    background-color: rgb(40, 59, 59);
+    transition: ease-out 300ms;
+}
+.conteiner__form{
+    background-color: rgb(40, 59, 59);
+    opacity: 1;
+    transition: opacity ease-in-out 300ms;
+}
+
+
+.hidden {
+    opacity: 0;
+    transition: opacity ease-in-out 0ms;
+}
