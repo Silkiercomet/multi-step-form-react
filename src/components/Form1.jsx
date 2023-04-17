@@ -21,7 +21,7 @@ const Form1 = ({setFullform}) => {
       <input type="email" name='Email' className='input__text' {...register("email", { required: true })}/>
       <label htmlFor="Phone">Phone Number</label>
       <input type="text" name='Phone' className='input__text' {...register("phone", { required: true })}/>
-      <button type="submit">Next Step</button>
+      <button type="submit" id='btn-next'>Next Step</button>
     </form>
   )
 }
