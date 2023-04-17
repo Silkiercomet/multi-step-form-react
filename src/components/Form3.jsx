@@ -28,7 +28,7 @@ const Form3 = ({ setFullform }) => {
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
       <label htmlFor="online">
-        online services online services online services
+        online services
       </label>
       <input
         type="checkbox"
@@ -38,7 +38,7 @@ const Form3 = ({ setFullform }) => {
         id="online"
       />
       <label htmlFor="storage">
-        larger storage larger storage larger storage
+        larger storage 
       </label>
       <input
         type="checkbox"
@@ -48,7 +48,7 @@ const Form3 = ({ setFullform }) => {
         id="storage"
       />
       <label htmlFor="custom">
-        customizable profile customizable profile customizable profile
+        customizable profile 
       </label>
       <input
         type="checkbox"
@@ -57,7 +57,7 @@ const Form3 = ({ setFullform }) => {
         {...register("addon")}
         id="custom"
       />
-      <button>next step</button>
+      <button type='submit' id='btn-next'>next step</button>
     </form>
   );
 };

@@ -44,7 +44,7 @@ const Form2 = ({setFullform}) => {
         <div>
         <button onClick={OnYearly}>yearly is: {yearly ? "activated" : "deactivated"}</button>
         </div>
-        <button type="submit">next step</button>
+        <button type="submit" id='btn-next'>next step</button>
       </form>
 
     </div>

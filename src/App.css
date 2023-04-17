@@ -73,11 +73,13 @@ you are only able to navigate to sections that already were visited
 .App{
     display: flex;
     flex-direction: column;
+  position: relative;
 }
 
 .conteiner__form{
     opacity: 1;
     transition: opacity ease-in-out 300ms;
+
 }
 
 
@@ -85,6 +87,8 @@ you are only able to navigate to sections that already were visited
     opacity: 0;
     transition: opacity ease-in-out 0ms;
 }
+
+
 
 /* Number Row */
 .numberRow{
@@ -142,7 +146,7 @@ you are only able to navigate to sections that already were visited
 /* container main*/
 .container{
     max-width: 90%;
-    min-height: 70vh;
+    min-width: 90%;
     position: relative;
 
     margin-inline: auto ;
@@ -152,5 +156,48 @@ you are only able to navigate to sections that already were visited
 
     background-color: white;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.conteiner__form header h1{
+  font-weight: 700;
+  color: var(--Marineblue);
+}
+.conteiner__form header p{
+  font-weight: 400;
+  color: var(--Coolgray);
+  max-width: 32ch;
+  font-size: 20px;
+  margin-block: 10px 20px;
+}
+.conteiner__form form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+.conteiner__form form label{
+  color: var(--Marineblue);
+  font-weight: 500;
+  line-height: .2;
+}
+.conteiner__form form input{
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid var(--Lightgray);
+
+  font-family: inherit;
+  font-size: 1.2rem;
+
+
+  transition: 200ms ease-in-out;
+}
+.conteiner__form form input:focus {
+  outline: none;
+  background-color: var(--Lightblue);
+}
+.conteiner__form form button#btn-next{
+  position: absolute;
+  bottom: -55px;
+  right: 0;
+  margin-left: auto;
 }
 /* container main*/
