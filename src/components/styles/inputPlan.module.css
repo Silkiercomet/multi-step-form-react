@@ -1,0 +1,22 @@
+.inputPlan{
+    display: flex;
+    line-height: 1.5;
+    padding: 15px;
+    border: 1px solid var(--Lightgray);
+    border-radius: 7.5px;
+    column-gap: 10px;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+.inputPlan figure{
+    margin-top: 3px;
+}
+.inputPlan div{
+    display: flex;
+    flex-direction: column;
+}
+.inputPlan__amount{
+    color: var(--Coolgray);
+}
+
+  
