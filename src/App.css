@@ -181,7 +181,7 @@ you are only able to navigate to sections that already were visited
   flex-direction: column;
   row-gap: 20px;
 }
-.conteiner__form form label{
+.conteiner__form form.form1 label{
   color: var(--Marineblue);
   font-weight: 500;
   line-height: .2;
@@ -281,3 +281,26 @@ input:checked + .slider:before {
   transform: translateX(24px);
 }
 /* slider */
+
+/* form3 */
+.form3 > label{
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  padding: 15px;
+
+  border: 1px solid var(--Purplishblue);
+  border-radius: 10px;
+}
+
+#online,
+#custom,
+#storage{
+  display: none;
+}
+#online:checked + label figure,
+#custom:checked + label figure,
+#storage:checked + label figure{
+  background-color: var(--Purplishblue);
+}
+/* form3 */
