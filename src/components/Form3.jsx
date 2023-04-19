@@ -1,5 +1,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import AddOn from "./AddOn";
 const Form3 = ({ setFullform }) => {
   const {
     register,
@@ -26,10 +27,7 @@ const Form3 = ({ setFullform }) => {
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <label htmlFor="online">
-        online services
-      </label>
+    <form onSubmit={handleSubmit(onSubmit)} className="form3">
       <input
         type="checkbox"
         name="online services"
@@ -37,9 +35,10 @@ const Form3 = ({ setFullform }) => {
         {...register("addon")}
         id="online"
       />
-      <label htmlFor="storage">
-        larger storage 
+      <label htmlFor="online">
+        <AddOn addonTitle={"Online services"} addonDes={"Access to multiplayer games"} amount={1} />
       </label>
+
       <input
         type="checkbox"
         name="larger storage"
@@ -47,9 +46,10 @@ const Form3 = ({ setFullform }) => {
         {...register("addon")}
         id="storage"
       />
-      <label htmlFor="custom">
-        customizable profile 
+      <label htmlFor="storage">
+      <AddOn addonTitle={"Larger storage"} addonDes={"Extra 1TB of cloud save"} amount={2} />
       </label>
+
       <input
         type="checkbox"
         name="customizable profile"
@@ -57,6 +57,10 @@ const Form3 = ({ setFullform }) => {
         {...register("addon")}
         id="custom"
       />
+      <label htmlFor="custom">
+      <AddOn addonTitle={"Customizable Profile"} addonDes={"Custom theme on your profile"} amount={2} />
+      </label>
+
       <button type='submit' id='btn-next'>next step</button>
     </form>
   );

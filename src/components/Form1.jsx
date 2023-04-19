@@ -14,7 +14,7 @@ const Form1 = ({setFullform}) => {
     }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className='form1'>
       <label htmlFor="Name">Name</label>
       <input type="text" name='Name' className='input__text' {...register("name", { required: true })} />
       <label htmlFor="Email">Email</label>
