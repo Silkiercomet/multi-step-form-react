@@ -10,19 +10,18 @@ const Form3 = ({ setFullform }) => {
 
   const onSubmit = (e) => {
     if (!e.addon.length) return;
-
+    
     let add = e.addon.reduce(
       (acc, cur) => (cur === "online services" ? (acc += 1) : (acc += 2)),
       0
     );
     setFullform((prev) => {
-      let { billing, total } = prev;
+      let { billing } = prev;
       if (billing.type === "yearly") {
-        add *= 12;
-        total += add
+        add = add * 10;
       }
       
-      return { ...prev, billing: billing, addon: e.addon, total:total };
+      return { ...prev, billing: billing, addon: e.addon };
     });
   };
 
