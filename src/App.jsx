@@ -29,7 +29,7 @@ function App() {
         {number === 1 && <Form1 setFullform={setFullform}/>}
         {number === 2 && <Form2 setFullform={setFullform}/>}
         {number === 3 && <Form3 setFullform={setFullform}/>}
-        {number === 4 && <Form4 fullForm={fullForm}/>}
+        {number === 4 && <Form4 fullForm={fullForm} setFullform={setFullform}/>}
         </div>
       </main>
 

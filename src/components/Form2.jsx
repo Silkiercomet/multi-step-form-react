@@ -27,7 +27,6 @@ const Form2 = ({ setFullform }) => {
       type: type,
       price: value,
       plan: e.plan,
-      addon: [],
     };
     const total = billing["price"];
     setFullform((prev) => ({ ...prev, billing: billing, total: total }));
