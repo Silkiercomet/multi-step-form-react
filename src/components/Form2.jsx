@@ -4,7 +4,7 @@ import InputPlan  from "./inputPlan";
 import arcadeIcon from "../assets/icon-arcade.svg"
 import advancedIcon from "../assets/icon-advanced.svg"
 import proIcon from "../assets/icon-pro.svg"
-const Form2 = ({ setFullform }) => {
+const Form2 = ({ setFullform, handleNumber }) => {
   const [yearly, setYearly] = useState(false);
   const {
     register,
@@ -30,6 +30,7 @@ const Form2 = ({ setFullform }) => {
     };
     const total = billing["price"];
     setFullform((prev) => ({ ...prev, billing: billing, total: total }));
+    handleNumber(true)
   };
   return (
     <div>
@@ -39,6 +40,7 @@ const Form2 = ({ setFullform }) => {
           type="radio"
           name="arcade"
           id="arcade"
+          /*checked={fullForm.billing["plan"] === "arcade" ? true : false} close */
           {...register("plan", { required: true })}
           value={"arcade"}
         />
@@ -96,8 +98,9 @@ const Form2 = ({ setFullform }) => {
    
         </div>
         <button type="submit" id="btn-next">
-          next step
+          Next Step
         </button>
+        <button id='btn-prev' onClick={()=>handleNumber(false)}>Go Back</button>
       </form>
     </div>
   );

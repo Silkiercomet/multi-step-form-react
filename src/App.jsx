@@ -6,6 +6,7 @@ import Form4 from './components/Form4'
 import NumberRow from './components/NumberRow'
 import './App.css'
 import FormHeader from './components/FormHeader'
+import Thanks from './components/Thanks'
 
 function App() {
   const [fullForm, setFullform] = useState({name:"",email:"",phone:"",billing:{type:"",price:0, plan:""}, addon:[], total:0})
@@ -20,16 +21,20 @@ function App() {
     return () => clearTimeout(timeoutId)
   }, [number])
 
+    const handleNumber =(foward=true) =>{
+      foward ? setNumber(number + 1) : setNumber(number - 1)
+    }
   return (
     <div className="App">
       <NumberRow number={number} setNumber={setNumber} />
       <main className="container">
         <div className="conteiner__form" ref={formContainerRef}>
-        <FormHeader number={number} />
-        {number === 1 && <Form1 setFullform={setFullform}/>}
-        {number === 2 && <Form2 setFullform={setFullform}/>}
-        {number === 3 && <Form3 setFullform={setFullform}/>}
-        {number === 4 && <Form4 fullForm={fullForm} setFullform={setFullform}/>}
+        <FormHeader number={number}/>
+        {number === 1 && <Form1 setFullform={setFullform} handleNumber={handleNumber} fullForm={fullForm}/>}
+        {number === 2 && <Form2 setFullform={setFullform} handleNumber={handleNumber} fullForm={fullForm}/>}
+        {number === 3 && <Form3 setFullform={setFullform} handleNumber={handleNumber} fullForm={fullForm}/>}
+        {number === 4 && <Form4 fullForm={fullForm} setFullform={setFullform} handleNumber={handleNumber}/>}
+        {number === 5 && <Thanks />}
         </div>
       </main>
 

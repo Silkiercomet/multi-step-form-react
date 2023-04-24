@@ -1,7 +1,7 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import AddOn from "./AddOn";
-const Form3 = ({ setFullform }) => {
+const Form3 = ({ setFullform, handleNumber }) => {
   const {
     register,
     handleSubmit,
@@ -10,7 +10,6 @@ const Form3 = ({ setFullform }) => {
 
   const onSubmit = (e) => {
     if (!e.addon.length) return;
-    
     let add = e.addon.reduce(
       (acc, cur) => (cur === "online services" ? (acc += 1) : (acc += 2)),
       0
@@ -23,6 +22,7 @@ const Form3 = ({ setFullform }) => {
       
       return { ...prev, billing: billing, addon: e.addon };
     });
+    handleNumber(true)
   };
 
   return (
@@ -60,7 +60,8 @@ const Form3 = ({ setFullform }) => {
       <AddOn addonTitle={"Customizable Profile"} addonDes={"Custom theme on your profile"} amount={2} />
       </label>
 
-      <button type='submit' id='btn-next'>next step</button>
+      <button type='submit' id='btn-next' >Next Step</button>
+      <button id='btn-prev' onClick={()=>handleNumber(false)}>Go Back</button>
     </form>
   );
 };
