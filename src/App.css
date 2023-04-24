@@ -201,11 +201,27 @@ you are only able to navigate to sections that already were visited
   outline: none;
   background-color: var(--Lightblue);
 }
-.conteiner__form form button#btn-next{
+button#btn-next{
   position: absolute;
   bottom: -55px;
   right: 0;
   margin-left: auto;
+
+  background-color: var(--Purplishblue);
+  color: var(--Magnolia);
+  border: 1px solid transparent;
+  padding: 7px 20px;
+  border-radius: 5px;
+}
+button#btn-prev{
+  position: absolute;
+  bottom: -55px;
+  left: 0;
+  margin-right: auto;
+
+  color: var(--Coolgray);
+  border: 0;
+  cursor: pointer;
 }
 /* container main*/
 

@@ -1,0 +1,53 @@
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color:var(--Coolgray);
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+    padding: 20px;
+}
+.plan{
+    display: flex;
+    flex-direction: column;
+
+
+}
+.total, .plan__details{
+    font-weight: 700;
+    color: var(--Marineblue);
+    font-size: 1.1rem;
+}
+.addon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-block: 5px;
+}
+.btn{
+    background-color: transparent;
+    padding: 0;
+    color: var(--Coolgray);
+    border: none;
+    border-bottom: 1px solid var(--Coolgray);
+    max-width: 6ch;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+.btn:hover{
+    border-color: var(--Marineblue);
+}
+.addon__price{
+    color: var(--Marineblue);
+}
+.complete__total{
+    color: var(--Purplishblue);
+    font-size: 1.2rem;
+    font-weight: 700;
+}
